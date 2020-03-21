@@ -1,6 +1,6 @@
 import React from 'react';
 import './CharityPreview.scss';
-import { Image } from 'semantic-ui-react';
+import { Button, Image } from 'semantic-ui-react';
 
 export default function CharityPreview() {
   return (
@@ -16,9 +16,21 @@ export default function CharityPreview() {
           <div className="charity-preview-metadata-container">
             <div className="charity-title">Charity name</div>
             <div>
-              <span>2 days ago</span>
+              <span>November 2, 2020</span>
             </div>
           </div>
+          <Button className="mini compact ui orange basic smaller">
+            <i className="heart outline icon" />
+            Donate
+          </Button>
+          <a href="www.google.ca" className="charity-preview-link">
+            <i className="star outline icon" />
+            Follow
+          </a>
+          <a href="www.google.ca" className="charity-preview-link">
+            <i className="share icon" />
+            Share
+          </a>
         </div>
       </div>
     </div>

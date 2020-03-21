@@ -37,10 +37,37 @@ exports[`CharityPreview renders 1`] = `
         </div>
         <div>
           <span>
-            2 days ago
+            November 2, 2020
           </span>
         </div>
       </div>
+      <Button
+        as="button"
+        className="mini compact ui orange basic smaller"
+      >
+        <i
+          className="heart outline icon"
+        />
+        Donate
+      </Button>
+      <a
+        className="charity-preview-link"
+        href="www.google.ca"
+      >
+        <i
+          className="star outline icon"
+        />
+        Follow
+      </a>
+      <a
+        className="charity-preview-link"
+        href="www.google.ca"
+      >
+        <i
+          className="share icon"
+        />
+        Share
+      </a>
     </div>
   </div>
 </div>
