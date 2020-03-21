@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image, Menu, Form, Input } from 'semantic-ui-react';
 import './HeaderNav.scss';
-import logo from '../assets/images/logo.png';
+import logo from '../../assets/images/logo.png';
 
 function HeaderNav() {
   return (
