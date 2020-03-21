@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CharityGrid renders with title prop 1`] = `
+<Fragment>
+  <CharityGridHeader
+    title="Trending"
+  />
+  <div
+    className="charity-grid"
+  >
+    <CharityPreview />
+    <CharityPreview />
+    <CharityPreview />
+    <CharityPreview />
+    <CharityPreview />
+  </div>
+  <Divider />
+</Fragment>
+`;
+
+exports[`CharityGrid renders without divider 1`] = `
+<Fragment>
+  <CharityGridHeader />
+  <div
+    className="charity-grid"
+  >
+    <CharityPreview />
+    <CharityPreview />
+    <CharityPreview />
+    <CharityPreview />
+    <CharityPreview />
+  </div>
+</Fragment>
+`;
+
+exports[`CharityGrid renders without props 1`] = `
+<Fragment>
+  <CharityGridHeader />
+  <div
+    className="charity-grid"
+  >
+    <CharityPreview />
+    <CharityPreview />
+    <CharityPreview />
+    <CharityPreview />
+    <CharityPreview />
+  </div>
+  <Divider />
+</Fragment>
+`;
