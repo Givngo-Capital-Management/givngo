@@ -1,13 +1,16 @@
 import React from 'react';
 import { Image, Menu, Form, Input } from 'semantic-ui-react';
 import './HeaderNav.scss';
+import { Link } from 'react-router-dom';
 import logo from '../../assets/images/logo.png';
 
 function HeaderNav() {
   return (
     <Menu borderless className="top-menu" fixed="top">
       <Menu.Item header className="logo">
-        <Image src={logo} size="tiny" />
+        <Link to="/">
+          <Image src={logo} size="tiny" />
+        </Link>
       </Menu.Item>
 
       <Menu.Menu className="nav-container">
