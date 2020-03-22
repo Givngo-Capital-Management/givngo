@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CharityMetadata renders 1`] = `
+<div
+  className="charity-metadata"
+>
+  <h3>
+    Video title
+  </h3>
+  <div
+    className="charity-stats"
+  >
+    <span>
+      Mar 19, 2020
+    </span>
+    <div
+      className="charity-actions"
+    >
+      <Button
+        as="button"
+        basic={true}
+        icon={true}
+        labelPosition="left"
+      >
+        <Icon
+          as="i"
+          name="heart"
+        />
+        Follow
+      </Button>
+      <Button
+        as="button"
+        basic={true}
+        icon={true}
+        labelPosition="left"
+      >
+        <Icon
+          as="i"
+          name="share"
+        />
+        Share
+      </Button>
+    </div>
+  </div>
+  <Divider />
+</div>
+`;

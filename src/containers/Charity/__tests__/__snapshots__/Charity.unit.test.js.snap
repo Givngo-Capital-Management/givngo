@@ -9,18 +9,9 @@ exports[`Charity renders 1`] = `
     id="396392696"
     title="breast friends"
   />
-  <div
+  <CharityMetadata
     className="metadata"
-    style={
-      Object {
-        "background": "#F91112",
-        "height": "100px",
-        "width": "100%",
-      }
-    }
-  >
-    Metadata
-  </div>
+  />
   <div
     className="charity-info-box"
     style={
