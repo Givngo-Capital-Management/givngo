@@ -1,6 +1,26 @@
 @import '../../styles/shared.scss';
 
+.charity-preview {
+  display: grid;
+  grid: 118px auto / 210px;
+
+  /*
+     override grid settings to make CharityPreview horizontal.
+     Vertical is default
+  */
+  &.horizontal {
+    grid: auto / 210px auto;
+    grid-column-gap: 4px;
+    .charity-info {
+      grid-row: 1 / 2;
+      grid-column: 2 / 3;
+    }
+  }
+}
+
 .charity-info {
+  grid-row: 2 / 3; /* is overriden when VideoPreview is horizontal */
+  grid-column: 1 / 2; /* is overriden when VideoPreview is horizontal */
   color: $text-color-dark;
 
   .charity-preview-metadata-container {
@@ -30,11 +50,6 @@
   .semi-bold {
     font-weight: 600;
   }
-}
-
-.charity-preview {
-  display: grid;
-  grid: 118px auto / 210px;
 }
 
 .image-container {

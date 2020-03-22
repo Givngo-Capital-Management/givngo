@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CharityPreview renders 1`] = `
+exports[`CharityPreview renders horizontally 1`] = `
 <div
-  className="charity-preview"
+  className="charity-preview horizontal"
 >
   <div
     className="image-container"
@@ -19,56 +19,129 @@ exports[`CharityPreview renders 1`] = `
         05:22
       </span>
     </div>
+  </div>
+  <div
+    className="charity-info"
+  >
     <div
-      className="charity-info"
+      className="semi-bold show-max-two-lines"
+    >
+      Video title
+    </div>
+    <div
+      className="charity-preview-metadata-container"
     >
       <div
-        className="semi-bold show-max-two-lines"
+        className="charity-title"
       >
-        Video title
+        Charity name
       </div>
-      <div
-        className="charity-preview-metadata-container"
-      >
-        <div
-          className="charity-title"
-        >
-          Charity name
-        </div>
-        <div>
-          <span>
-            November 2, 2020
-          </span>
-        </div>
+      <div>
+        <span>
+          November 2, 2020
+        </span>
       </div>
-      <Button
-        as="button"
-        className="mini compact ui orange basic smaller"
-      >
-        <i
-          className="heart outline icon"
-        />
-        Donate
-      </Button>
-      <a
-        className="charity-preview-link"
-        href="www.google.ca"
-      >
-        <i
-          className="star outline icon"
-        />
-        Follow
-      </a>
-      <a
-        className="charity-preview-link"
-        href="www.google.ca"
-      >
-        <i
-          className="share icon"
-        />
-        Share
-      </a>
     </div>
+    <Button
+      as="button"
+      className="mini compact ui orange basic smaller"
+    >
+      <i
+        className="heart outline icon"
+      />
+      Donate
+    </Button>
+    <a
+      className="charity-preview-link"
+      href="www.google.ca"
+    >
+      <i
+        className="star outline icon"
+      />
+      Follow
+    </a>
+    <a
+      className="charity-preview-link"
+      href="www.google.ca"
+    >
+      <i
+        className="share icon"
+      />
+      Share
+    </a>
+  </div>
+</div>
+`;
+
+exports[`CharityPreview renders vertically 1`] = `
+<div
+  className="charity-preview "
+>
+  <div
+    className="image-container"
+  >
+    <Image
+      as="img"
+      src="http://via.placeholder.com/210x118"
+      ui={true}
+    />
+    <div
+      className="time-label"
+    >
+      <span>
+        05:22
+      </span>
+    </div>
+  </div>
+  <div
+    className="charity-info"
+  >
+    <div
+      className="semi-bold show-max-two-lines"
+    >
+      Video title
+    </div>
+    <div
+      className="charity-preview-metadata-container"
+    >
+      <div
+        className="charity-title"
+      >
+        Charity name
+      </div>
+      <div>
+        <span>
+          November 2, 2020
+        </span>
+      </div>
+    </div>
+    <Button
+      as="button"
+      className="mini compact ui orange basic smaller"
+    >
+      <i
+        className="heart outline icon"
+      />
+      Donate
+    </Button>
+    <a
+      className="charity-preview-link"
+      href="www.google.ca"
+    >
+      <i
+        className="star outline icon"
+      />
+      Follow
+    </a>
+    <a
+      className="charity-preview-link"
+      href="www.google.ca"
+    >
+      <i
+        className="share icon"
+      />
+      Share
+    </a>
   </div>
 </div>
 `;
