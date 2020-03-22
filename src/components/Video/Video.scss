@@ -1,6 +1,8 @@
 .video-container {
   position: relative;
   width: 100%;
+  background-color: black;
+  max-height: 1080px;
 
   &:before {
     content: "";
