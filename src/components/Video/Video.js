@@ -14,8 +14,8 @@ export default function Video(props) {
       <div className="video">
         <iframe
           title={title}
-          width="640"
-          height="360"
+          width="100%"
+          height="100%"
           src={embedUrl}
           frameBorder="0"
           allow="autoplay; encrypted-media; fullscreen"
