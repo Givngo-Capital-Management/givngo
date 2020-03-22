@@ -24,7 +24,9 @@ function HeaderNav() {
       </Menu.Menu>
 
       <Menu.Menu position="right">
-        <Menu.Item name="features">Features</Menu.Item>
+        <Menu.Item name="features">
+          <Link to="/features">Features</Link>
+        </Menu.Item>
         <Menu.Item name="services">Services</Menu.Item>
         <Menu.Item name="donations">Raise Donations</Menu.Item>
         <Menu.Item name="avatar">
