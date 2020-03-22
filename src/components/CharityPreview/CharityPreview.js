@@ -23,6 +23,7 @@ export default function CharityPreview(props) {
           <div className="charity-title">Charity name</div>
           <div>
             <span>November 2, 2020</span>
+            <p>Short description</p>
           </div>
         </div>
         <Button className="mini compact ui orange basic smaller">

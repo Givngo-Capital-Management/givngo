@@ -14,7 +14,6 @@ export default function CharityGrid(props) {
         <CharityPreview />
         <CharityPreview />
         <CharityPreview />
-        <CharityPreview />
       </div>
       {hideDivider ? null : <Divider />}
     </>

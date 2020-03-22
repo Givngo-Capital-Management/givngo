@@ -12,18 +12,9 @@ exports[`Charity renders 1`] = `
   <CharityMetadata
     className="metadata"
   />
-  <div
+  <CharityInfoBox
     className="charity-info-box"
-    style={
-      Object {
-        "background": "#BD10E0",
-        "height": "100px",
-        "width": "100%",
-      }
-    }
-  >
-    Video Info box
-  </div>
+  />
   <RelatedCharities
     className="related-charities"
   />

@@ -10,10 +10,6 @@ export default function CharityMetadata() {
         <span>Mar 19, 2020</span>
         <div className="charity-actions">
           <Button basic icon labelPosition="left">
-            <Icon name="heart" />
-            Follow
-          </Button>
-          <Button basic icon labelPosition="left">
             <Icon name="share" />
             Share
           </Button>

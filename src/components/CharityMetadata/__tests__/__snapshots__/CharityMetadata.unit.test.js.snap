@@ -24,18 +24,6 @@ exports[`CharityMetadata renders 1`] = `
       >
         <Icon
           as="i"
-          name="heart"
-        />
-        Follow
-      </Button>
-      <Button
-        as="button"
-        basic={true}
-        icon={true}
-        labelPosition="left"
-      >
-        <Icon
-          as="i"
           name="share"
         />
         Share
