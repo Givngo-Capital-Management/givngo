@@ -18,7 +18,7 @@ export default function Video(props) {
           height="100%"
           src={embedUrl}
           frameBorder="0"
-          allow="autoplay; encrypted-media; fullscreen"
+          allow="autoplay; encrypted-media;"
           allowFullScreen
         />
       </div>

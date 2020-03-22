@@ -2,21 +2,32 @@
 
 exports[`Charity renders 1`] = `
 <div
-  className="charity-detail-grid"
+  className="charity-detail"
 >
   <Video
     className="video"
-    id="396392696"
+    id="374481280"
     title="breast friends"
   />
-  <CharityMetadata
-    className="metadata"
-  />
-  <CharityInfoBox
-    className="charity-info-box"
-  />
-  <RelatedCharities
-    className="related-charities"
-  />
+  <div
+    className="charity-detail-grid"
+  >
+    <CharityMetadata
+      className="metadata"
+    />
+    <CharityInfoBox
+      className="charity-info-box"
+    />
+    <div
+      className="charity-detail-sidebar"
+    >
+      <CharityDonateBox
+        className="charity-donate-box"
+      />
+      <RelatedCharities
+        className="related-charities"
+      />
+    </div>
+  </div>
 </div>
 `;

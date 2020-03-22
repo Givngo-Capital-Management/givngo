@@ -10,7 +10,7 @@ exports[`renders video component correctly 1`] = `
     className="video"
   >
     <iframe
-      allow="autoplay; encrypted-media; fullscreen"
+      allow="autoplay; encrypted-media;"
       allowFullScreen={true}
       frameBorder="0"
       height="100%"
