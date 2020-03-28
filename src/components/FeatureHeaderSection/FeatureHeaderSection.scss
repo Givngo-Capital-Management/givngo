@@ -1,0 +1,35 @@
+.section {
+  display: flex;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  -webkit-box-align: center;
+  align-items: center;
+
+  .div-wrap {
+    width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 1px;
+  }
+
+  .heading {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    font-family: sans-serif;
+    color: #fa7d00;
+    font-size: 72px;
+    line-height: 72px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: -2px;
+  }
+
+  .text-block {
+    margin-right: 80px;
+    margin-bottom: 30px;
+    margin-left: 80px;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+  }
+}
