@@ -1,23 +1,29 @@
 import React from 'react'
 import './FeatureTwoImage.scss'
 
-export default function FeatureTwoImage() {
+export default function FeatureTwoImage({urls, position, srcset_param}) {
   return (
-    <div class="section">
-      <div class="div-part-1">
-        <div class="div-wrap-1">
-          <div class ="text-box">
-            <h1 class="heading-1">The donation sensation</h1>
-            <p class="paragraph-1">Ginvgo’s mission is to help nonprofits and charities raise donations. We have built a platform so people can quickly learn about a cause or charity and then donate and support. We have eliminated as many steps as possible in the donation process which generates the highest conversions possible.</p>
+    <div className="section">
+      <div className="div-part-1">
+        <div className="div-wrap-1">
+          <div className="text-box" style={position==="left" ? {paddingLeft: "100px", marginLeft: "auto"}:{paddingRight: "100px"}}>
+            <h1 className="heading-1">The donation sensation</h1>
+            <p className="paragraph-1">Ginvgo’s mission is to help nonprofits and charities raise donations. We have built a platform so people can quickly learn about a cause or charity and then donate and support. We have eliminated as many steps as possible in the donation process which generates the highest conversions possible.</p>
           </div>
-          <div class="image-wrap">
-            <img src="https://givngo.io/wp-content/themes/givngo/images/OOOTTTIIIIII.png" width="1280" srcset="https://givngo.io/wp-content/themes/givngo/images/OOOTTTIIIIII-p-500.png 500w, https://givngo.io/wp-content/themes/givngo/images/OOOTTTIIIIII-p-800.png 800w, https://givngo.io/wp-content/themes/givngo/images/OOOTTTIIIIII-p-1080.png 1080w, https://givngo.io/wp-content/themes/givngo/images/OOOTTTIIIIII.png 2560w" sizes="(max-width: 479px) 92vw, (max-width: 767px) 95vw, 96vw" alt="" class="image-1">
+          <div className="image-wrap">
+            <img 
+              src={urls[0]} 
+              width="1280" 
+              srcset={srcset_param}
+              sizes="(max-width: 479px) 92vw, (max-width: 767px) 95vw, 96vw" 
+              alt="" 
+              className="image-1">
             </img>
           </div>
         </div>
       </div>
-      <div class="div-part-2">
-        <div class="image"></div>
+      <div className="div-part-2" style={position==="left" ? {justifyContent: "flex-start"}:{justifyContent: "flex-end"}}>
+        <div className="image" style={{backgroundImage: "url(" + urls[1] + ")"}}></div>
       </div>
     </div>
   );
