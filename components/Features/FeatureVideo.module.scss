@@ -1,0 +1,16 @@
+.video-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  -webkit-box-flex: 1;
+  flex: 1;
+
+  .video {
+    width: 100%;
+    position: relative;
+    padding: 0;
+    min-height: 480px;
+  }
+}
