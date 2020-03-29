@@ -1,6 +1,7 @@
 import React from 'react';
 import CharityGrid from '../components/Home/CharityGrid';
 import AppLayout from '../components/AppLayout';
+import withRedux from '../store/withRedux';
 
 const styles = {
   homeContainer: {
@@ -11,7 +12,7 @@ const styles = {
   },
 };
 
-export default function Index() {
+const Index = () => {
   return (
     <AppLayout>
       <div style={styles.homeContainer}>
@@ -20,4 +21,6 @@ export default function Index() {
       </div>
     </AppLayout>
   );
-}
+};
+
+export default withRedux(Index);
