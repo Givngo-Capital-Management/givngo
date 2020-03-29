@@ -1,0 +1,49 @@
+.video-text-section{
+  max-width: 1280px;
+  margin-right: auto;
+  margin-left: auto;
+  border-style: none none solid;
+  border-width: 1px;
+  border-color: #000 #000 #eee;
+  border-radius: 1px;
+
+  .video-text-wrapper {
+    padding-right: 20px;
+    padding-left: 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+
+    .text-wrapper {
+      position: relative;
+      z-index: 1;
+      max-width: 50%;
+      margin-right: auto;
+      margin-bottom: 100px;
+      margin-left: auto;
+      padding-right: 50px;
+      padding-left: 50px;
+      -webkit-box-flex: 1;
+      flex: 1;
+      text-align: center;
+
+      .heading {
+        margin-top: 0px;
+        margin-bottom: 40px;
+        font-size: 40px;
+        line-height: 48px;
+      }
+
+      .paragraph {
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 100px;
+      background-color: #fff;
+    }
+  }
+}

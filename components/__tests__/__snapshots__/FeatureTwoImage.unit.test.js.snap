@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FeatureTwoImage renders on left 1`] = `
+<div>
+  <div>
+    <div>
+      <div
+        style={
+          Object {
+            "marginLeft": "auto",
+            "paddingLeft": "100px",
+          }
+        }
+      >
+        <h1>
+          The donation sensation
+        </h1>
+        <p>
+          Ginvgo’s mission is to help nonprofits and charities raise donations. We have built a platform so people can quickly learn about a cause or charity and then donate and support. We have eliminated as many steps as possible in the donation process which generates the highest conversions possible.
+        </p>
+      </div>
+      <div>
+        <img
+          alt=""
+          sizes="(max-width: 479px) 92vw, (max-width: 767px) 95vw, 96vw"
+          src="https://givngo.io/wp-content/themes/givngo/images/OOOTTTIIIIII.png"
+          srcSet="https://givngo.io/wp-content/themes/givngo/images/OOOTTTIIIIII-p-500.png 500w, https://givngo.io/wp-content/themes/givngo/images/OOOTTTIIIIII-p-800.png 800w, https://givngo.io/wp-content/themes/givngo/images/OOOTTTIIIIII-p-1080.png 1080w, https://givngo.io/wp-content/themes/givngo/images/OOOTTTIIIIII.png 2560w"
+          width="1280"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "justifyContent": "flex-start",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "backgroundImage": "url(https://givngo.io/wp-content/themes/givngo/images/2305-6-Eblast-One-Tree-Planted-One-Tree-Planted-2.jpg)",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`FeatureTwoImage renders on right 1`] = `
+<div>
+  <div>
+    <div>
+      <div
+        style={
+          Object {
+            "paddingRight": "100px",
+          }
+        }
+      >
+        <h1>
+          The donation sensation
+        </h1>
+        <p>
+          Ginvgo’s mission is to help nonprofits and charities raise donations. We have built a platform so people can quickly learn about a cause or charity and then donate and support. We have eliminated as many steps as possible in the donation process which generates the highest conversions possible.
+        </p>
+      </div>
+      <div>
+        <img
+          alt=""
+          sizes="(max-width: 479px) 92vw, (max-width: 767px) 95vw, 96vw"
+          src="https://givngo.io/wp-content/themes/givngo/images/OOOTTTIIIIII.png"
+          srcSet="https://givngo.io/wp-content/themes/givngo/images/OOOTTTIIIIII-p-500.png 500w, https://givngo.io/wp-content/themes/givngo/images/OOOTTTIIIIII-p-800.png 800w, https://givngo.io/wp-content/themes/givngo/images/OOOTTTIIIIII-p-1080.png 1080w, https://givngo.io/wp-content/themes/givngo/images/OOOTTTIIIIII.png 2560w"
+          width="1280"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "backgroundImage": "url(https://givngo.io/wp-content/themes/givngo/images/2305-6-Eblast-One-Tree-Planted-One-Tree-Planted-2.jpg)",
+        }
+      }
+    />
+  </div>
+</div>
+`;

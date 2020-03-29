@@ -1,0 +1,103 @@
+.form-layout {
+  position: relative;
+  z-index: 1;
+  width: 50%;
+
+  .form-block {
+    margin-bottom: 0px;
+    padding: 100px;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.2);
+  
+    .form-header {
+      margin-top: 0px;
+      margin-bottom: 20px;
+      color: #f10011;
+      font-size: 36px;
+      line-height: 40px;
+      font-weight: 700;
+      text-align: left;
+      text-transform: none;
+    }
+    
+    .form-text {
+      margin-bottom: 20px;
+      font-size: 18px;
+      line-height: 30px;
+      text-align: left;
+    }
+
+    .form {
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      flex-direction: column;
+
+      .field-label {
+        margin-bottom: 0px;
+        line-height: 30px;
+        font-weight: 400;
+      }
+
+      .name-text-field {
+        height: 50px;
+        margin-bottom: 10px;
+      }
+
+      .w-input {
+        display: block;
+        width: 100%;
+        padding: 8px 12px;
+        font-size: 14px;
+        line-height: 1.428571429;
+        color: #333333;
+        vertical-align: middle;
+        background-color: #ffffff;
+        border: 1px solid #cccccc;
+      }
+
+      .w-button {
+        padding: 9px 15px;
+        color: white;
+        border: 0;
+        line-height: inherit;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .button-form {
+        display: flex;
+        width: 100%;
+        height: 64px;
+        margin-top: 25px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        align-items: center;
+        border-radius: 4px;
+        background-color: #f10012;
+        font-size: 20px;
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+    }
+
+    .w-form-done {
+      display: none;
+      padding: 20px;
+      text-align: center;
+      background-color: #6ACB4C;
+      margin-top: 10px;
+    }
+
+    .w-form-fail {
+      display: none;
+      margin-top: 10px;
+      padding: 10px;
+      color: #ffdede
+    }
+  }
+}

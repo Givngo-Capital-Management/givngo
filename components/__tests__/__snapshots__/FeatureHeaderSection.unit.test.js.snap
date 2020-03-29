@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FeatureHeaderSection renders 1`] = `
+<div
+  style={
+    Object {
+      "paddingBottom": "50px",
+    }
+  }
+>
+  <div>
+    <h1>
+      Donation creation with givngo
+    </h1>
+    <div>
+      Powerful tools to increase donations, grow membersm and create awareness.
+    </div>
+  </div>
+</div>
+`;
