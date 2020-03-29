@@ -1,23 +1,23 @@
 import React from 'react';
 import { Image, Button } from 'semantic-ui-react';
-import './CharityInfoBox.scss';
+import styles from './CharityInfoBox.module.scss';
 
 export default function CharityInfoBox() {
   return (
-    <div className="charity-info-box">
+    <div className={styles.box}>
       <Image
-        className="charity-image"
+        className={styles.image}
         src="http://via.placeholder.com/48x48"
         circular
       />
-      <div className="charity-info">
+      <div className={styles.info}>
         <div className="charity-name">Charity Name</div>
         <span>80k followers</span>
       </div>
-      <Button className="follow" color="orange">
+      <Button className={styles.follow} color="orange">
         Follow
       </Button>
-      <div className="charity-description">
+      <div className={styles.description}>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry&apos;s standard dummy text

@@ -5,9 +5,7 @@ exports[`CharityGrid renders with title prop 1`] = `
   <CharityGridHeader
     title="Trending"
   />
-  <div
-    className="charity-grid"
-  >
+  <div>
     <CharityPreview />
     <CharityPreview />
     <CharityPreview />
@@ -20,9 +18,7 @@ exports[`CharityGrid renders with title prop 1`] = `
 exports[`CharityGrid renders without divider 1`] = `
 <Fragment>
   <CharityGridHeader />
-  <div
-    className="charity-grid"
-  >
+  <div>
     <CharityPreview />
     <CharityPreview />
     <CharityPreview />
@@ -34,9 +30,7 @@ exports[`CharityGrid renders without divider 1`] = `
 exports[`CharityGrid renders without props 1`] = `
 <Fragment>
   <CharityGridHeader />
-  <div
-    className="charity-grid"
-  >
+  <div>
     <CharityPreview />
     <CharityPreview />
     <CharityPreview />

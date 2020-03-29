@@ -1,6 +1,5 @@
 import React from 'react';
 import CharityPreview from './CharityPreview';
-import './RelatedCharities.scss';
 
 export default function RelatedCharities() {
   return (

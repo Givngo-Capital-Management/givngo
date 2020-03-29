@@ -1,5 +1,5 @@
 import React from 'react';
-import './Video.scss';
+import styles from './Video.module.scss';
 
 const BASE_EMBED_URL = 'https://player.vimeo.com/video/';
 
@@ -10,8 +10,8 @@ export default function Video(props) {
   }
   const embedUrl = `${BASE_EMBED_URL}${id}?autoplay=1`;
   return (
-    <div className="video-container">
-      <div className="video">
+    <div className={styles.container}>
+      <div className={styles.video}>
         <iframe
           title={title}
           width="100%"

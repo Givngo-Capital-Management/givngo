@@ -7,14 +7,13 @@ exports[`renders HeaderNav 1`] = `
   fixed="top"
 >
   <MenuItem
-    className="logo"
     header={true}
   >
     <Link
-      href="/home"
+      href="/"
     >
       <a
-        href="/home"
+        href="/"
       >
         <Image
           as="img"
@@ -25,12 +24,8 @@ exports[`renders HeaderNav 1`] = `
       </a>
     </Link>
   </MenuItem>
-  <MenuMenu
-    className="nav-container"
-  >
-    <MenuItem
-      className="search-input"
-    >
+  <MenuMenu>
+    <MenuItem>
       <Form
         as="form"
       >

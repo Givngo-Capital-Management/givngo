@@ -1,22 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CharityDonateBox renders 1`] = `
-<div
-  className="charity-donate-box"
->
-  <div
-    className="charity-donate-box-header"
-  >
+<div>
+  <div>
     <p>
       Donate now
     </p>
   </div>
-  <div
-    className="charity-donate-box-content"
-  >
-    <div
-      className="ui equal width grid"
-    >
+  <div>
+    <Grid>
       <div
         className="equal width row"
       >
@@ -50,7 +42,7 @@ exports[`CharityDonateBox renders 1`] = `
           </Button>
         </div>
       </div>
-    </div>
+    </Grid>
     <h3>
       Total raised: $132,619
     </h3>

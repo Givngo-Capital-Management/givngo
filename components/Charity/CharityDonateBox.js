@@ -1,15 +1,15 @@
 import React from 'react';
-import { Button } from 'semantic-ui-react';
-import './CharityDonateBox.scss';
+import { Button, Grid } from 'semantic-ui-react';
+import styles from './CharityDonateBox.module.scss';
 
 export default function CharityDonateBox() {
   return (
-    <div className="charity-donate-box">
-      <div className="charity-donate-box-header">
+    <div className={styles.box}>
+      <div className={styles.header}>
         <p>Donate now</p>
       </div>
-      <div className="charity-donate-box-content">
-        <div className="ui equal width grid">
+      <div className={styles.content}>
+        <Grid>
           <div className="equal width row">
             <div className="ten wide column">
               <h3 className="ui header">
@@ -25,7 +25,7 @@ export default function CharityDonateBox() {
               </Button>
             </div>
           </div>
-        </div>
+        </Grid>
 
         <h3>Total raised: $132,619</h3>
       </div>

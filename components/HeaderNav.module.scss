@@ -3,11 +3,11 @@
   .logo {
     width: 17rem;
   }
-  .nav-container {
+  .container {
     flex-grow: 1;
     padding: 0;
   
-    .search-input {
+    .input {
       width: 50%;
       margin: auto;
   
@@ -16,7 +16,7 @@
       }
     }
   }
-  .header-icon {
+  .icon {
     color: #a0a0a0;
   }
 }

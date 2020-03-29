@@ -1,41 +1,41 @@
 import React from 'react';
-import { Button, Image } from 'semantic-ui-react';
-import './CharityPreview.scss';
+import { Button, Image, Icon } from 'semantic-ui-react';
+import styles from './CharityPreview.module.scss';
 
 export default function CharityPreview(props) {
   const { horizontal } = props;
   return (
     <div
-      className={['charity-preview', horizontal ? 'horizontal' : null].join(
+      className={[styles.preview, horizontal ? styles.horizontal : null].join(
         ' ',
       )}
     >
-      <div className="image-container">
+      <div className={styles.image}>
         <Image src="http://via.placeholder.com/210x118" />
-        <div className="time-label">
+        <div className={styles.time}>
           <span>05:22</span>
         </div>
       </div>
 
-      <div className="charity-info">
-        <div className="semi-bold show-max-two-lines">Video title</div>
-        <div className="charity-preview-metadata-container">
-          <div className="charity-title">Charity name</div>
+      <div className={styles.info}>
+        <div className={`${styles.bold} ${styles.lines}`}>Video title</div>
+        <div className={styles.metadata}>
+          <div className={styles.title}>Charity name</div>
           <div>
             <span>November 2, 2020</span>
             <p>Short description</p>
           </div>
         </div>
         <Button className="mini compact ui orange basic smaller">
-          <i className="heart outline icon" />
+          <Icon name="heart outline" />
           Donate
         </Button>
-        <a href="www.google.ca" className="charity-preview-link">
-          <i className="star outline icon" />
+        <a href="www.google.ca" className={styles.link}>
+          <Icon name="star outline" />
           Follow
         </a>
-        <a href="www.google.ca" className="charity-preview-link">
-          <i className="share icon" />
+        <a href="www.google.ca" className={styles.link}>
+          <Icon name="share" />
           Share
         </a>
       </div>

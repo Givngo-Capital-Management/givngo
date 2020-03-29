@@ -2,38 +2,28 @@
 
 exports[`CharityPreview renders horizontally 1`] = `
 <div
-  className="charity-preview horizontal"
+  className=" "
 >
-  <div
-    className="image-container"
-  >
+  <div>
     <Image
       as="img"
       src="http://via.placeholder.com/210x118"
       ui={true}
     />
-    <div
-      className="time-label"
-    >
+    <div>
       <span>
         05:22
       </span>
     </div>
   </div>
-  <div
-    className="charity-info"
-  >
+  <div>
     <div
-      className="semi-bold show-max-two-lines"
+      className="undefined undefined"
     >
       Video title
     </div>
-    <div
-      className="charity-preview-metadata-container"
-    >
-      <div
-        className="charity-title"
-      >
+    <div>
+      <div>
         Charity name
       </div>
       <div>
@@ -49,26 +39,27 @@ exports[`CharityPreview renders horizontally 1`] = `
       as="button"
       className="mini compact ui orange basic smaller"
     >
-      <i
-        className="heart outline icon"
+      <Icon
+        as="i"
+        name="heart outline"
       />
       Donate
     </Button>
     <a
-      className="charity-preview-link"
       href="www.google.ca"
     >
-      <i
-        className="star outline icon"
+      <Icon
+        as="i"
+        name="star outline"
       />
       Follow
     </a>
     <a
-      className="charity-preview-link"
       href="www.google.ca"
     >
-      <i
-        className="share icon"
+      <Icon
+        as="i"
+        name="share"
       />
       Share
     </a>
@@ -78,38 +69,28 @@ exports[`CharityPreview renders horizontally 1`] = `
 
 exports[`CharityPreview renders vertically 1`] = `
 <div
-  className="charity-preview "
+  className=" "
 >
-  <div
-    className="image-container"
-  >
+  <div>
     <Image
       as="img"
       src="http://via.placeholder.com/210x118"
       ui={true}
     />
-    <div
-      className="time-label"
-    >
+    <div>
       <span>
         05:22
       </span>
     </div>
   </div>
-  <div
-    className="charity-info"
-  >
+  <div>
     <div
-      className="semi-bold show-max-two-lines"
+      className="undefined undefined"
     >
       Video title
     </div>
-    <div
-      className="charity-preview-metadata-container"
-    >
-      <div
-        className="charity-title"
-      >
+    <div>
+      <div>
         Charity name
       </div>
       <div>
@@ -125,26 +106,27 @@ exports[`CharityPreview renders vertically 1`] = `
       as="button"
       className="mini compact ui orange basic smaller"
     >
-      <i
-        className="heart outline icon"
+      <Icon
+        as="i"
+        name="heart outline"
       />
       Donate
     </Button>
     <a
-      className="charity-preview-link"
       href="www.google.ca"
     >
-      <i
-        className="star outline icon"
+      <Icon
+        as="i"
+        name="star outline"
       />
       Follow
     </a>
     <a
-      className="charity-preview-link"
       href="www.google.ca"
     >
-      <i
-        className="share icon"
+      <Icon
+        as="i"
+        name="share"
       />
       Share
     </a>

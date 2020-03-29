@@ -2,21 +2,21 @@ import React from 'react';
 import { Image, Menu, Form, Input } from 'semantic-ui-react';
 import Link from 'next/link';
 import logo from '../assets/images/logo.png';
-import './HeaderNav.scss';
+import styles from './HeaderNav.module.scss';
 
 export default function HeaderNav() {
   return (
     <Menu borderless className="top-menu" fixed="top">
-      <Menu.Item header className="logo">
-        <Link href="/home">
-          <a href="/home">
+      <Menu.Item header className={styles.logo}>
+        <Link href="/">
+          <a href="/">
             <Image src={logo} size="tiny" />
           </a>
         </Link>
       </Menu.Item>
 
-      <Menu.Menu className="nav-container">
-        <Menu.Item className="search-input">
+      <Menu.Menu className={styles.container}>
+        <Menu.Item className={styles.input}>
           <Form>
             <Form.Field>
               <Input placeholder="Search" size="small" action="Go" />

@@ -1,33 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CharityGridHeader renders with empty string header 1`] = `
-<div
-  className="charity-grid-header"
->
-  <span
-    className="title"
-  />
+<div>
+  <span />
 </div>
 `;
 
 exports[`CharityGridHeader renders with title 1`] = `
-<div
-  className="charity-grid-header"
->
-  <span
-    className="title"
-  >
+<div>
+  <span>
     Children's charities
   </span>
 </div>
 `;
 
 exports[`CharityGridHeader renders without props 1`] = `
-<div
-  className="charity-grid-header"
->
-  <span
-    className="title"
-  />
+<div>
+  <span />
 </div>
 `;

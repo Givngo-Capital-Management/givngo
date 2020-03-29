@@ -1,14 +1,14 @@
 import React from 'react';
 import { Button, Divider, Icon } from 'semantic-ui-react';
-import './CharityMetadata.scss';
+import styles from './CharityMetadata.module.scss';
 
 export default function CharityMetadata() {
   return (
-    <div className="charity-metadata">
+    <div className={styles.metadata}>
       <h3>Video title</h3>
-      <div className="charity-stats">
+      <div className={styles.stats}>
         <span>Mar 19, 2020</span>
-        <div className="charity-actions">
+        <div className={styles.actions}>
           <Button basic icon labelPosition="left">
             <Icon name="share" />
             Share

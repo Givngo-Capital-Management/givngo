@@ -3,12 +3,8 @@
 exports[`renders null if id in video component not specified 1`] = `""`;
 
 exports[`renders video component correctly 1`] = `
-<div
-  className="video-container"
->
-  <div
-    className="video"
-  >
+<div>
+  <div>
     <iframe
       allow="autoplay; encrypted-media;"
       allowFullScreen={true}

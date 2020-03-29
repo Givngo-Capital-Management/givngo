@@ -1,11 +1,11 @@
 import React from 'react';
-import './CharityGridHeader.scss';
+import styles from './CharityGridHeader.module.scss';
 
 export default function CharityGridHeader(props) {
   const { title } = props;
   return (
-    <div className="charity-grid-header">
-      <span className="title">{title}</span>
+    <div className={styles.header}>
+      <span className={styles.title}>{title}</span>
     </div>
   );
 }

@@ -11,7 +11,7 @@ export default function Charity() {
   return (
     <AppLayout>
       <Video id="374481280" title="breast friends" />
-      <div style={{ padding: 24 }}>
+      <div style={{ paddingLeft: 20, paddingRight: 20 }}>
         <Grid columns={2}>
           <Grid.Column width={10}>
             <CharityMetadata />
