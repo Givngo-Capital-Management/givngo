@@ -20,13 +20,13 @@ export default function Features() {
       <FeatureTwoImage
         urls={images}
         position="right"
-        srcset_param="https://givngo.io/wp-content/themes/givngo/images/OOOTTTIIIIII-p-500.png 500w, https://givngo.io/wp-content/themes/givngo/images/OOOTTTIIIIII-p-800.png 800w, https://givngo.io/wp-content/themes/givngo/images/OOOTTTIIIIII-p-1080.png 1080w, https://givngo.io/wp-content/themes/givngo/images/OOOTTTIIIIII.png 2560w"
+        srcsetParam="https://givngo.io/wp-content/themes/givngo/images/OOOTTTIIIIII-p-500.png 500w, https://givngo.io/wp-content/themes/givngo/images/OOOTTTIIIIII-p-800.png 800w, https://givngo.io/wp-content/themes/givngo/images/OOOTTTIIIIII-p-1080.png 1080w, https://givngo.io/wp-content/themes/givngo/images/OOOTTTIIIIII.png 2560w"
       />
       <FeatureVideoText />
       <FeatureTwoImage
         urls={image1}
         position="left"
-        srcset_param="https://givngo.io/wp-content/themes/givngo/images/No-Color-Present-Tense-p-500.jpeg 500w, https://givngo.io/wp-content/themes/givngo/images/No-Color-Present-Tense.jpg 851w"
+        srcsetParam="https://givngo.io/wp-content/themes/givngo/images/No-Color-Present-Tense-p-500.jpeg 500w, https://givngo.io/wp-content/themes/givngo/images/No-Color-Present-Tense.jpg 851w"
       />
       <FeatureFormSection />
     </AppLayout>
