@@ -46,7 +46,15 @@ exports[`renders HeaderNav 1`] = `
     <MenuItem
       name="features"
     >
-      Features
+      <Link
+        href="/features"
+      >
+        <a
+          href="/features"
+        >
+          Features
+        </a>
+      </Link>
     </MenuItem>
     <MenuItem
       name="services"

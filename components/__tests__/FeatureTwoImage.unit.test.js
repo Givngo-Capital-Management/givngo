@@ -11,10 +11,6 @@ const srcsetParam =
   'https://givngo.io/wp-content/themes/givngo/images/OOOTTTIIIIII-p-500.png 500w, https://givngo.io/wp-content/themes/givngo/images/OOOTTTIIIIII-p-800.png 800w, https://givngo.io/wp-content/themes/givngo/images/OOOTTTIIIIII-p-1080.png 1080w, https://givngo.io/wp-content/themes/givngo/images/OOOTTTIIIIII.png 2560w';
 
 describe('FeatureTwoImage', () => {
-  test('render without props', () => {
-    const wrapper = shallow(<FeatureTwoImage />);
-    expect(wrapper).toMatchSnapshot();
-  });
   test('renders on left', () => {
     const wrapper = shallow(
       <FeatureTwoImage
