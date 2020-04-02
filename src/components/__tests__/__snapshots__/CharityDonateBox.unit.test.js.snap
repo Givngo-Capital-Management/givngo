@@ -1,13 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CharityDonateBox renders 1`] = `
-<div>
-  <div>
+<div
+  className="box"
+>
+  <div
+    className="header"
+  >
     <p>
       Donate now
     </p>
   </div>
-  <div>
+  <div
+    className="content"
+  >
     <Grid>
       <div
         className="equal width row"

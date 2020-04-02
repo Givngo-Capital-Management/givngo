@@ -1,11 +1,11 @@
 import React from 'react';
 import { Grid } from 'semantic-ui-react';
-import Video from '../components/Charity/Video';
-import RelatedCharities from '../components/Charity/RelatedCharities';
-import CharityMetadata from '../components/Charity/CharityMetadata';
-import CharityInfoBox from '../components/Charity/CharityInfoBox';
-import CharityDonateBox from '../components/Charity/CharityDonateBox';
-import AppLayout from '../components/AppLayout';
+import Video from '../src/components/Charity/Video';
+import RelatedCharities from '../src/components/Charity/RelatedCharities';
+import CharityMetadata from '../src/components/Charity/CharityMetadata';
+import CharityInfoBox from '../src/components/Charity/CharityInfoBox';
+import CharityDonateBox from '../src/components/Charity/CharityDonateBox';
+import AppLayout from '../src/components/AppLayout';
 
 export default function Charity() {
   return (
