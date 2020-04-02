@@ -2,28 +2,38 @@
 
 exports[`CharityPreview renders horizontally 1`] = `
 <div
-  className=" "
+  className="preview horizontal"
 >
-  <div>
+  <div
+    className="image"
+  >
     <Image
       as="img"
       src="http://via.placeholder.com/210x118"
       ui={true}
     />
-    <div>
+    <div
+      className="time"
+    >
       <span>
         05:22
       </span>
     </div>
   </div>
-  <div>
+  <div
+    className="info"
+  >
     <div
-      className="undefined undefined"
+      className="bold lines"
     >
       Video title
     </div>
-    <div>
-      <div>
+    <div
+      className="metadata"
+    >
+      <div
+        className="title"
+      >
         Charity name
       </div>
       <div>
@@ -46,6 +56,7 @@ exports[`CharityPreview renders horizontally 1`] = `
       Donate
     </Button>
     <a
+      className="link"
       href="www.google.ca"
     >
       <Icon
@@ -55,6 +66,7 @@ exports[`CharityPreview renders horizontally 1`] = `
       Follow
     </a>
     <a
+      className="link"
       href="www.google.ca"
     >
       <Icon
@@ -69,28 +81,38 @@ exports[`CharityPreview renders horizontally 1`] = `
 
 exports[`CharityPreview renders vertically 1`] = `
 <div
-  className=" "
+  className="preview "
 >
-  <div>
+  <div
+    className="image"
+  >
     <Image
       as="img"
       src="http://via.placeholder.com/210x118"
       ui={true}
     />
-    <div>
+    <div
+      className="time"
+    >
       <span>
         05:22
       </span>
     </div>
   </div>
-  <div>
+  <div
+    className="info"
+  >
     <div
-      className="undefined undefined"
+      className="bold lines"
     >
       Video title
     </div>
-    <div>
-      <div>
+    <div
+      className="metadata"
+    >
+      <div
+        className="title"
+      >
         Charity name
       </div>
       <div>
@@ -113,6 +135,7 @@ exports[`CharityPreview renders vertically 1`] = `
       Donate
     </Button>
     <a
+      className="link"
       href="www.google.ca"
     >
       <Icon
@@ -122,6 +145,7 @@ exports[`CharityPreview renders vertically 1`] = `
       Follow
     </a>
     <a
+      className="link"
       href="www.google.ca"
     >
       <Icon

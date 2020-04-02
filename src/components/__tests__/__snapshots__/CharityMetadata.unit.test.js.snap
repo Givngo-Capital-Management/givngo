@@ -1,15 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CharityMetadata renders 1`] = `
-<div>
+<div
+  className="metadata"
+>
   <h3>
     Video title
   </h3>
-  <div>
+  <div
+    className="stats"
+  >
     <span>
       Mar 19, 2020
     </span>
-    <div>
+    <div
+      className="actions"
+    >
       <Button
         as="button"
         basic={true}

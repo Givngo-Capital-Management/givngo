@@ -1,7 +1,7 @@
 import React from 'react';
-import CharityGrid from '../components/Home/CharityGrid';
-import AppLayout from '../components/AppLayout';
-import withRedux from '../store/withRedux';
+import CharityGrid from '../src/components/Home/CharityGrid';
+import AppLayout from '../src/components/AppLayout';
+import withRedux from '../src/store/withRedux';
 
 const styles = {
   homeContainer: {
