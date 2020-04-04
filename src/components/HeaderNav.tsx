@@ -1,16 +1,41 @@
 import React from 'react';
-import { Image, Menu, Form, Input } from 'semantic-ui-react';
+import { Image, Menu, Form, Input, Button } from 'semantic-ui-react';
 import Link from 'next/link';
-import logo from '../../assets/images/logo.png';
 import styles from './HeaderNav.module.scss';
+import firebase from 'firebase/app'
+import 'firebase/auth';
+import 'firebase/database';
 
-export default function HeaderNav() {
+const SignOutButtonBase = (props: any) => (
+  <Button color="orange" type="button" onClick={() => firebase.auth().signOut()}>
+    Sign Out
+  </Button>
+);
+
+const SignOutButton = (SignOutButtonBase);
+
+const SignedInComponent = (
+  <Menu.Item name="signout">
+    <SignOutButton/>
+  </Menu.Item>
+)
+
+const SignedOutComponent = (
+  <Menu.Item name="avatar">
+    <a href="/signin">
+      Sign In
+    </a>
+  </Menu.Item>
+)
+
+export default function HeaderNav(props: any) {
+  const authUser = firebase.auth().currentUser;
   return (
     <Menu borderless className="top-menu" fixed="top">
       <Menu.Item header className={styles.logo}>
         <Link href="/">
           <a href="/">
-            <Image src={logo} size="tiny" />
+            <Image src='/assets/logo.png' size="tiny" />
           </a>
         </Link>
       </Menu.Item>
@@ -29,9 +54,7 @@ export default function HeaderNav() {
         <Menu.Item name="features">Features</Menu.Item>
         <Menu.Item name="services">Services</Menu.Item>
         <Menu.Item name="donations">Raise Donations</Menu.Item>
-        <Menu.Item name="avatar">
-          <Image src="http://via.placeholder.com/80x80" avatar />
-        </Menu.Item>
+        {authUser ? SignedInComponent : SignedOutComponent}
       </Menu.Menu>
     </Menu>
   );

@@ -1,7 +1,14 @@
 import React from 'react';
 import 'semantic-ui-css/semantic.min.css';
+import initFirebase from '../src/services/auth/initFirebase';
 
-export default function MyApp({ Component, pageProps }) {
-  // eslint-disable-next-line react/jsx-props-no-spreading
-  return <Component {...pageProps} />;
+// Init the Firebase app.
+initFirebase();
+
+const App = ({ Component, pageProps }) => {
+  return (
+    <Component {...pageProps} />
+  )
 }
+
+export default App;

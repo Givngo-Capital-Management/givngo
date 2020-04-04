@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Charity renders 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "AuthUser": null,
+      "token": undefined,
+    }
+  }
+>
+  <WithAuthUserInfo(undefined) />
+</ContextProvider>
+`;
