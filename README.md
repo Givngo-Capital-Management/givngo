@@ -6,6 +6,8 @@
 Requirements: ensure you have `node`, `npm`, and `yarn` installed on your machine
 
 1. Checkout repo: `git clone git@github.com:Givngo-Capital-Management/givngo.git`
+1. Request environment keys: https://drive.google.com/drive/u/0/folders/1tVoXPNsvnfcH19GK2umRvavJ9xXyWfHG
+1. Download `.env`, `.env.build`, and `firebaseServiceAccount.json`
 1. Run `yarn` to install dependencies
 1. Run `yarn dev` to start a development server on `localhost:3000`
 
