@@ -1,12 +1,11 @@
 /* eslint react/jsx-props-no-spreading: 0 */
 
 import React from 'react'
-import { get } from 'lodash/object'
 import { AuthUserInfoContext } from '../auth/hooks'
+import { get } from 'lodash/object'
 
-// Provides an AuthUserInfo prop to the composed component.
-export default ComposedComponent => {
-  const WithAuthUserInfoComp = props => {
+export default condition => ComposedComponent => {
+  const WithAuthorizationComp = props => {
     const { AuthUserInfo: AuthUserInfoFromSession, ...otherProps } = props
     return (
       <AuthUserInfoContext.Consumer>
@@ -20,10 +19,17 @@ export default ComposedComponent => {
     )
   }
 
-  WithAuthUserInfoComp.getInitialProps = async ctx => {
-    const AuthUserInfo = get(ctx, 'Givngo.AuthUserInfo', null)
-    
-    // Evaluate the composed component's getInitialProps().
+  WithAuthorizationComp.getInitialProps = async ctx => {
+    if (typeof window === 'undefined') {
+      const AuthUserInfo = get(ctx, 'Givngo.AuthUserInfo', null)
+
+      if (!condition(AuthUserInfo.AuthUser)) {
+        ctx.res.writeHead(302, { Location: '/signin' })
+        ctx.res.end()
+        return;
+      }
+    }
+
     let composedInitialProps = {}
     if (ComposedComponent.getInitialProps) {
       composedInitialProps = await ComposedComponent.getInitialProps(ctx)
@@ -31,12 +37,10 @@ export default ComposedComponent => {
 
     return {
       ...composedInitialProps,
-      AuthUserInfo,
     }
   }
 
-  WithAuthUserInfoComp.displayName = `WithAuthUserInfo(${ComposedComponent.displayName})`
-  WithAuthUserInfoComp.defaultProps = {}
+  WithAuthorizationComp.displayName = `WithAuthorizationComp(${ComposedComponent.displayName})`
 
-  return WithAuthUserInfoComp
+  return WithAuthorizationComp
 }

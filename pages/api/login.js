@@ -6,7 +6,7 @@ const handler = (req, res) => {
     return res.status(400)
   }
 
-  const { token } = req.body
+  const { token, user } = req.body
 
   // Here, we decode the user's Firebase token and store it in a cookie. Use
   // express-session (or similar) to store the session data server-side.
@@ -24,6 +24,7 @@ const handler = (req, res) => {
     .then(decodedToken => {
       req.session.decodedToken = decodedToken
       req.session.token = token
+      req.session.user = user
       return decodedToken
     })
     .then(decodedToken => {

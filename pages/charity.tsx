@@ -1,14 +1,14 @@
 import React from 'react';
 
+import Charity from '../src/components/Pages/Charity';
+
 import withAuthUser from '../src/services/pageWrappers/withAuthUser';
 import withAuthUserInfo from '../src/services/pageWrappers/withAuthUserInfo';
 
-import ForgotForm from '../src/components/Pages/Forgot';
-
-const Forgot = (props: any) => {
+const CharityPage = (props: any) => {
   return (
-    <ForgotForm {...props}/>
-  )
+    <Charity {...props}/>
+  );
 };
 
-export default withAuthUser(withAuthUserInfo(Forgot));
+export default withAuthUser(withAuthUserInfo(CharityPage))
