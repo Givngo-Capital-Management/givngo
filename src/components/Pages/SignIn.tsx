@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Form, Grid, Header, Icon, Image, Message, Segment } from 'semantic-ui-react';
 import { useRouter } from 'next/router';
-import get from 'lodash/get';
 
 import AppLayout from '../AppLayout';
 
@@ -9,13 +8,9 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 
 const SignInForm = (props: any) => {
-  const { AuthUserInfo, data } = props;
-  const AuthUser = get(AuthUserInfo, 'AuthUser', null);
-
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
-  const [authUser, setAuthUser] = useState<firebase.auth.UserCredential | null>(null);
   const router = useRouter();
 
   const isInvalidSignIn = password === ''|| email === '';
@@ -23,8 +18,7 @@ const SignInForm = (props: any) => {
   const onSubmit = (event: any, data: any) => {
     firebase.auth()
       .signInWithEmailAndPassword(email, password)
-      .then(authed => {
-        setAuthUser(authed);
+      .then(() => {
         router.push("/");
       })
       .catch(error => {

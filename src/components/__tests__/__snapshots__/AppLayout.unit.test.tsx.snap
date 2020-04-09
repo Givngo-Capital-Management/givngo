@@ -4,7 +4,19 @@ exports[`renders <AppLayout/> with children 1`] = `
 <div
   className="layout"
 >
-  <HeaderNav />
+  <HeaderNav>
+    <div>
+      Child
+    </div>
+    <div>
+      <span>
+        Child
+      </span>
+      <p>
+        Child
+      </p>
+    </div>
+  </HeaderNav>
   <div>
     Child
   </div>
@@ -23,7 +35,11 @@ exports[`renders <AppLayout/> with one child 1`] = `
 <div
   className="layout"
 >
-  <HeaderNav />
+  <HeaderNav>
+    <div>
+      Child 1
+    </div>
+  </HeaderNav>
   <div>
     Child 1
   </div>

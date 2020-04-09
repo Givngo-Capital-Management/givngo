@@ -13,9 +13,7 @@ exports[`renders HeaderNav 1`] = `
     <Link
       href="/"
     >
-      <a
-        href="/"
-      >
+      <a>
         <Image
           as="img"
           size="tiny"

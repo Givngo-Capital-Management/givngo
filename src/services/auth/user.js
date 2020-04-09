@@ -9,8 +9,9 @@ import { get, has } from 'lodash/object'
  * @return {String} AuthUser.id - The user's ID
  * @return {String} AuthUser.email - The user's email
  * @return {Boolean} AuthUser.emailVerified - Whether the user has verified their email
+ * @return {Object|null} AuthUser.roles - The user's roles
  */
-export const createAuthUser = firebaseUser => {
+export const createAuthUser = (firebaseUser, dbUser) => {
   if (!firebaseUser || !firebaseUser.uid) {
     return null
   }
@@ -20,6 +21,7 @@ export const createAuthUser = firebaseUser => {
     emailVerified: has(firebaseUser, 'emailVerified')
       ? get(firebaseUser, 'emailVerified') // Firebase JS SDK
       : get(firebaseUser, 'email_verified'), // Firebase admin SDK
+    roles: has(dbUser, 'roles') ? get(dbUser, 'roles') : {},
   }
 }
 
@@ -29,16 +31,16 @@ export const createAuthUser = firebaseUser => {
  *   Firebase user object.
  * @param {String} firebaseToken - A Firebase auth token string.
  * @return {Object|null} AuthUserInfo - The auth user info object.
- * @return {String} AuthUserInfo.AuthUser - An AuthUser object (see
- *   `createAuthUser` above).
+ * @return {String} AuthUserInfo.AuthUser - An AuthUser object (see `createAuthUser` above).
  * @return {String} AuthUser.token - The user's encoded Firebase token.
  */
 export const createAuthUserInfo = ({
   firebaseUser = null,
+  dbUser = null,
   token = null,
 } = {}) => {
   return {
-    AuthUser: createAuthUser(firebaseUser),
+    AuthUser: createAuthUser(firebaseUser, dbUser),
     token,
   }
 }

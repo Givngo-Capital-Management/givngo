@@ -1,7 +1,6 @@
 /* eslint react/jsx-props-no-spreading: 0 */
 
 import React from 'react'
-import PropTypes from 'prop-types'
 import { get, set } from 'lodash/object'
 import { AuthUserInfoContext, useFirebaseAuth } from '../auth/hooks'
 import { createAuthUser, createAuthUserInfo } from '../auth/user'
@@ -11,12 +10,13 @@ import { createAuthUser, createAuthUserInfo } from '../auth/user'
 // context.
 export default ComposedComponent => {
   const WithAuthUserComp = props => {
-    const { AuthUserInfo, ...otherProps } = props
+    let { AuthUserInfo, ...otherProps } = props
 
     // We'll use the authed user from client-side auth (Firebase JS SDK)
     // when available. On the server side, we'll use the authed user from
     // the session. This allows us to server-render while also using Firebase's
     // client-side auth functionality.
+
     const { user: firebaseUser } = useFirebaseAuth()
     const AuthUserFromClient = createAuthUser(firebaseUser)
     const { AuthUser: AuthUserFromSession, token } = AuthUserInfo
@@ -42,16 +42,15 @@ export default ComposedComponent => {
       addSession(req, res)
       AuthUserInfo = createAuthUserInfo({
         firebaseUser: get(req, 'session.decodedToken', null),
+        dbUser: get(req, 'session.user', null),
         token: get(req, 'session.token', null),
       })
     } else {
-      // If client-side, get AuthUserInfo from stored data. We store it
-      // in _document.js. See:
-      // https://github.com/zeit/next.js/issues/2252#issuecomment-353992669
+      // If client-side, get AuthUserInfo from stored data.
       try {
-        const jsonData = JSON.parse(
-          window.document.getElementById('__MY_AUTH_USER_INFO').textContent
-        )
+        const user64 = localStorage.getItem('user')
+        const defaultUser = btoa(JSON.stringify(createAuthUserInfo()))
+        const jsonData = JSON.parse(atob(user64 ? user64 : defaultUser))
         if (jsonData) {
           AuthUserInfo = jsonData
         } else {
@@ -66,7 +65,7 @@ export default ComposedComponent => {
 
     // Explicitly add the user to a custom prop in the getInitialProps
     // context for ease of use in child components.
-    set(ctx, 'myCustomData.AuthUserInfo', AuthUserInfo)
+    set(ctx, 'Givngo.AuthUserInfo', AuthUserInfo)
 
     // Evaluate the composed component's getInitialProps().
     let composedInitialProps = {}
@@ -81,18 +80,6 @@ export default ComposedComponent => {
   }
 
   WithAuthUserComp.displayName = `WithAuthUser(${ComposedComponent.displayName})`
-
-  WithAuthUserComp.propTypes = {
-    AuthUserInfo: PropTypes.shape({
-      AuthUser: PropTypes.shape({
-        id: PropTypes.string.isRequired,
-        email: PropTypes.string.isRequired,
-        emailVerified: PropTypes.bool.isRequired,
-      }),
-      token: PropTypes.string,
-    }).isRequired,
-  }
-
   WithAuthUserComp.defaultProps = {}
 
   return WithAuthUserComp

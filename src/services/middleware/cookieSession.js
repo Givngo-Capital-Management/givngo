@@ -2,9 +2,7 @@ import cookieSession from 'cookie-session'
 
 export const addSession = (req, res) => {
   // Ensure that session secrets are set.
-  if (
-    !(process.env.SESSION_SECRET_CURRENT && process.env.SESSION_SECRET_PREVIOUS)
-  ) {
+  if (!(process.env.SESSION_SECRET_CURRENT && process.env.SESSION_SECRET_PREVIOUS)) {
     throw new Error(
       'Session secrets must be set as env vars `SESSION_SECRET_CURRENT` and `SESSION_SECRET_PREVIOUS`.'
     )
