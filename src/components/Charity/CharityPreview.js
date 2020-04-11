@@ -1,9 +1,11 @@
 import React from 'react';
 import { Button, Image, Icon } from 'semantic-ui-react';
 import styles from './CharityPreview.module.scss';
+import moment from 'moment'
 
 export default function CharityPreview(props) {
-  const { horizontal } = props;
+  const { horizontal, donateUrl, name, videoDate, videoId, videoPreview, videoTitle } = props;
+  const date = moment.utc(videoDate * 1000).format('MMMM DD, YYYY').toString()
   return (
     <div
       className={[styles.preview, horizontal ? styles.horizontal : null].join(
@@ -11,18 +13,18 @@ export default function CharityPreview(props) {
       )}
     >
       <div className={styles.image}>
-        <Image src="http://via.placeholder.com/210x118" />
+        <Image src={videoPreview} />
         <div className={styles.time}>
           <span>05:22</span>
         </div>
       </div>
 
       <div className={styles.info}>
-        <div className={`${styles.bold} ${styles.lines}`}>Video title</div>
+        <div className={`${styles.bold} ${styles.lines}`}>{videoTitle}</div>
         <div className={styles.metadata}>
-          <div className={styles.title}>Charity name</div>
+        <div className={styles.title}>{name}</div>
           <div>
-            <span>November 2, 2020</span>
+            <span>{date}</span>
             <p>Short description</p>
           </div>
         </div>
