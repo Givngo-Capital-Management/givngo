@@ -1,13 +1,16 @@
 import React from 'react';
 import { Button, Divider, Icon } from 'semantic-ui-react';
 import styles from './CharityMetadata.module.scss';
+import moment from 'moment';
 
-export default function CharityMetadata() {
+export default function CharityMetadata(props) {
+  const { charity } = props;
+  const date = moment.utc(charity.video_date * 1000).format('MMMM DD, YYYY').toString()
   return (
     <div className={styles.metadata}>
-      <h3>Video title</h3>
+      <h3>{charity.video_title}</h3>
       <div className={styles.stats}>
-        <span>Mar 19, 2020</span>
+        <span>{date}</span>
         <div className={styles.actions}>
           <Button basic icon labelPosition="left">
             <Icon name="share" />

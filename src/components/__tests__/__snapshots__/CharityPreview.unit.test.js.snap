@@ -4,27 +4,40 @@ exports[`CharityPreview renders horizontally 1`] = `
 <div
   className="preview horizontal"
 >
-  <div
-    className="image"
+  <Link
+    href="/charity/"
   >
-    <Image
-      as="img"
-      ui={true}
-    />
-    <div
-      className="time"
-    >
-      <span>
-        05:22
-      </span>
-    </div>
-  </div>
+    <a>
+      <div
+        className="image"
+      >
+        <Image
+          as="img"
+          src=""
+          ui={true}
+        />
+        <div
+          className="time"
+        >
+          <span>
+            05:22
+          </span>
+        </div>
+      </div>
+    </a>
+  </Link>
   <div
     className="info"
   >
-    <div
-      className="bold lines"
-    />
+    <Link
+      href="/charity/"
+    >
+      <a>
+        <div
+          className="bold lines"
+        />
+      </a>
+    </Link>
     <div
       className="metadata"
     >
@@ -33,7 +46,7 @@ exports[`CharityPreview renders horizontally 1`] = `
       />
       <div>
         <span>
-          Invalid date
+          January 01, 1970
         </span>
         <p>
           Short description
@@ -78,27 +91,40 @@ exports[`CharityPreview renders vertically 1`] = `
 <div
   className="preview "
 >
-  <div
-    className="image"
+  <Link
+    href="/charity/"
   >
-    <Image
-      as="img"
-      ui={true}
-    />
-    <div
-      className="time"
-    >
-      <span>
-        05:22
-      </span>
-    </div>
-  </div>
+    <a>
+      <div
+        className="image"
+      >
+        <Image
+          as="img"
+          src=""
+          ui={true}
+        />
+        <div
+          className="time"
+        >
+          <span>
+            05:22
+          </span>
+        </div>
+      </div>
+    </a>
+  </Link>
   <div
     className="info"
   >
-    <div
-      className="bold lines"
-    />
+    <Link
+      href="/charity/"
+    >
+      <a>
+        <div
+          className="bold lines"
+        />
+      </a>
+    </Link>
     <div
       className="metadata"
     >
@@ -107,7 +133,7 @@ exports[`CharityPreview renders vertically 1`] = `
       />
       <div>
         <span>
-          Invalid date
+          January 01, 1970
         </span>
         <p>
           Short description

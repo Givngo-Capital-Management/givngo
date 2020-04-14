@@ -1,6 +1,18 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Charity from '../../../pages/charity';
+import Charity from '../Pages/Charity';
+import router from 'next/router';
+
+jest.mock("next/router", () => ({
+  useRouter() {
+      return {
+          route: "/",
+          pathname: "",
+          query: "",
+          asPath: "",
+      };
+  },
+}));
 
 jest.mock('firebase/app', () => {
   return {

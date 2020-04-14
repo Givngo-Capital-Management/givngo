@@ -4,14 +4,12 @@ exports[`CharityMetadata renders 1`] = `
 <div
   className="metadata"
 >
-  <h3>
-    Video title
-  </h3>
+  <h3 />
   <div
     className="stats"
   >
     <span>
-      Mar 19, 2020
+      Invalid date
     </span>
     <div
       className="actions"

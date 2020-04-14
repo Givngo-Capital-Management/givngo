@@ -1,14 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Charity renders 1`] = `
-<ContextProvider
-  value={
-    Object {
-      "AuthUser": null,
-      "token": undefined,
+<AppLayout>
+  <Video />
+  <div
+    style={
+      Object {
+        "paddingLeft": 20,
+        "paddingRight": 20,
+      }
     }
-  }
->
-  <WithAuthUserInfo(undefined) />
-</ContextProvider>
+  >
+    <Grid
+      columns={2}
+    >
+      <GridColumn
+        width={10}
+      >
+        <CharityMetadata
+          charity={Object {}}
+        />
+        <CharityInfoBox
+          charity={Object {}}
+        />
+      </GridColumn>
+      <GridColumn
+        floated="right"
+        width={6}
+      >
+        <div>
+          <CharityDonateBox />
+          <RelatedCharities />
+        </div>
+      </GridColumn>
+    </Grid>
+  </div>
+</AppLayout>
 `;

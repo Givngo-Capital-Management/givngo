@@ -14,12 +14,7 @@ export default function CharityGrid(props) {
     previews.push(
       <CharityPreview
         key={i}
-        donateUrl={charity.donate_url}
-        name={charity.name}
-        videoDate={charity.video_date}
-        videoId={charity.video_id}
-        videoPreview={charity.video_preview}
-        videoTitle={charity.video_title}
+        charity={charity}
       />
     )
   }
