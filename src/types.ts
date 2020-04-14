@@ -1,4 +1,5 @@
 export interface Charity {
+  id: string,
   donate_url: string,
   name: string,
   video_date: number,
@@ -6,6 +7,8 @@ export interface Charity {
   video_preview: string,
   video_title: string,
   categories: Categories,
+  description: string,
+  logo: string,
 }
 
 export interface Categories {

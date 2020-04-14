@@ -21,18 +21,21 @@ const Index = (props: any) => {
   const [charities, setCharities] = useState<Charities>({});
 
   useEffect(() => {
-    firebase.database()
+    const listener = firebase.database()
       .ref('charities')
       .on('value', (snapshot) => {
-        setCharities(snapshot.val())
+        if (snapshot) {
+          setCharities(snapshot.val());
+        }
       });
+    return listener(null);
   }, []);
 
   const charitiesByCategory: { [category: string]: Charity[] } = {}
   Object.keys(charities).map((key, index) => {
     const category: string = charities[key].categories['name']
     charitiesByCategory[category] = charitiesByCategory[category] || [];
-    charitiesByCategory[category].push(charities[key]);
+    charitiesByCategory[category].push({id: key, ...charities[key]});
   });
 
   let grids: any[] = []

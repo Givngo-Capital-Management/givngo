@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {Grid} from 'semantic-ui-react';
 
 import AppLayout from '../AppLayout';
@@ -8,17 +8,36 @@ import CharityMetadata from '../Charity/CharityMetadata';
 import CharityInfoBox from '../Charity/CharityInfoBox';
 import CharityDonateBox from '../Charity/CharityDonateBox';
 
-import 'firebase/auth';
+import firebase from 'firebase/app';
+import 'firebase/database';
+import {Charity} from '../../types';
+import { useRouter } from 'next/router';
 
-const Charity = (props: any) => {
+const CharityPage = (props: any) => {
+  const [charity, setCharity] = useState<Charity>();
+  const router = useRouter();
+
+  const { id } = router.query;
+
+  useEffect(() => {
+    const listener = firebase.database()
+      .ref(`charities/${id}`)
+      .on('value', (snapshot) => {
+        if (snapshot) {
+          setCharity(snapshot.val());
+        }
+      });
+    return listener(null);
+  }, []);
+
   return (
     <AppLayout>
-      <Video id="374481280" title="breast friends" />
+      <Video id={charity?.video_id} title={charity?.video_title} />
       <div style={{ paddingLeft: 20, paddingRight: 20 }}>
         <Grid columns={2}>
           <Grid.Column width={10}>
-            <CharityMetadata />
-            <CharityInfoBox />
+            <CharityMetadata charity={charity ? charity : {}} />
+            <CharityInfoBox charity={charity ? charity : {}} />
           </Grid.Column>
           <Grid.Column width={6} floated="right">
             <div>
@@ -32,4 +51,4 @@ const Charity = (props: any) => {
   )
 };
 
-export default Charity;
+export default CharityPage;
