@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Charity from '../Pages/Charity';
+import Charity from '../Pages/Charity/Charity';
 import router from 'next/router';
 
 jest.mock("next/router", () => ({

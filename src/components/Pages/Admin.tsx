@@ -5,6 +5,7 @@ import get from 'lodash/get';
 import AppLayout from '../AppLayout';
 
 import 'firebase/auth';
+import Link from 'next/link';
 
 const Admin = (props: any) => {
   return (
@@ -15,6 +16,9 @@ const Admin = (props: any) => {
               <Header textAlign='center' as='h2' color='orange'>
                 Admin
               </Header>
+              <Link href="/charity/register">
+                <a>Register charity</a>
+              </Link>
             </Container>
           </Grid.Column>
         </Grid>

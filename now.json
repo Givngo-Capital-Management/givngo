@@ -9,7 +9,8 @@
     "FIREBASE_APP_ID": "@firebase_app_id",
     "FIREBASE_CLIENT_EMAIL": "@firebase_client_email",
     "SESSION_SECRET_CURRENT": "@session_secret_current",
-    "SESSION_SECRET_PREVIOUS": "@session_secret_previous"
+    "SESSION_SECRET_PREVIOUS": "@session_secret_previous",
+    "VIMEO_TOKEN": "@vimeo_token"
   },
   "build": {
     "env": {
@@ -23,7 +24,8 @@
       "FIREBASE_CLIENT_EMAIL": "@firebase_client_email",
       "FIREBASE_PRIVATE_API_KEY": "@firebase_private_api_key",
       "SESSION_SECRET_CURRENT": "@session_secret_current",
-      "SESSION_SECRET_PREVIOUS": "@session_secret_previous"
+      "SESSION_SECRET_PREVIOUS": "@session_secret_previous",
+      "VIMEO_TOKEN": "@vimeo_token"
     }
   }
 }

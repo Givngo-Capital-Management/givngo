@@ -64,11 +64,13 @@ exports[`renders HeaderNav 1`] = `
     <MenuItem
       name="avatar"
     >
-      <a
+      <Link
         href="/signin"
       >
-        Sign In
-      </a>
+        <a>
+          Signin
+        </a>
+      </Link>
     </MenuItem>
   </MenuMenu>
 </Menu>

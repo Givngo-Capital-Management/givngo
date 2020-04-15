@@ -15,6 +15,7 @@ const nextConfig = {
     FIREBASE_MESSAGING_SENDER_ID: process.env.FIREBASE_MESSAGING_SENDER_ID,
     FIREBASE_APP_ID: process.env.FIREBASE_APP_ID,
     FIREBASE_PRIVATE_API_KEY: process.env.FIREBASE_PRIVATE_API_KEY,
+    VIMEO_TOKEN: process.env.VIMEO_TOKEN,
   },
   webpack: (config) => {
     config.module.rules.push({

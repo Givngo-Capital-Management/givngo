@@ -19,25 +19,31 @@ const SignedInComponent = (
 
 const SignedOutComponent = (
   <Menu.Item name="avatar">
-    <a href="/signin">
-      Sign In
-    </a>
+    <Link href="/signin">
+      <a>
+        Signin
+      </a>
+    </Link>
   </Menu.Item>
 )
 
 const AccountComponent = (
   <Menu.Item name="avatar">
-    <a href="/account">
-      Account
-    </a>
+    <Link href="/account">
+      <a>
+        Account
+      </a>
+    </Link>
   </Menu.Item>
 )
 
 const AdminComponent = (
   <Menu.Item name="avatar">
-    <a href="/admin">
-      Admin
-    </a>
+    <Link href="/admin">
+      <a>
+        Admin
+      </a>
+    </Link>
   </Menu.Item>
 )
 
