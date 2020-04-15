@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import {Grid} from 'semantic-ui-react';
 
-import AppLayout from '../AppLayout';
-import Video from '../Charity/Video';
-import RelatedCharities from '../Charity/RelatedCharities';
-import CharityMetadata from '../Charity/CharityMetadata';
-import CharityInfoBox from '../Charity/CharityInfoBox';
-import CharityDonateBox from '../Charity/CharityDonateBox';
+import AppLayout from '../../AppLayout';
+import Video from '../../Charity/Video';
+import RelatedCharities from '../../Charity/RelatedCharities';
+import CharityMetadata from '../../Charity/CharityMetadata';
+import CharityInfoBox from '../../Charity/CharityInfoBox';
+import CharityDonateBox from '../../Charity/CharityDonateBox';
 
 import firebase from 'firebase/app';
 import 'firebase/database';
-import {Charity} from '../../types';
+import {Charity} from '../../../types';
 import { useRouter } from 'next/router';
 
 const CharityPage = (props: any) => {

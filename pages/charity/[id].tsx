@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Charity from '../../src/components/Pages/Charity';
+import Charity from '../../src/components/Pages/Charity/Charity';
 
 import withAuthUser from '../../src/services/pageWrappers/withAuthUser';
 import withAuthUserInfo from '../../src/services/pageWrappers/withAuthUserInfo';
