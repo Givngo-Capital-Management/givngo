@@ -10,7 +10,10 @@
     "FIREBASE_CLIENT_EMAIL": "@firebase_client_email",
     "SESSION_SECRET_CURRENT": "@session_secret_current",
     "SESSION_SECRET_PREVIOUS": "@session_secret_previous",
-    "VIMEO_TOKEN": "@vimeo_token"
+    "VIMEO_TOKEN": "@vimeo_token",
+    "STRIPE_PUBLISHABLE_KEY": "@stripe_publishable_key",
+    "STRIPE_SECRET_KEY": "@stripe_secret_key",
+    "STRIPE_WEBHOOK_SECRET": "@stripe_webhook_secret"
   },
   "build": {
     "env": {
@@ -25,7 +28,10 @@
       "FIREBASE_PRIVATE_API_KEY": "@firebase_private_api_key",
       "SESSION_SECRET_CURRENT": "@session_secret_current",
       "SESSION_SECRET_PREVIOUS": "@session_secret_previous",
-      "VIMEO_TOKEN": "@vimeo_token"
+      "VIMEO_TOKEN": "@vimeo_token",
+      "STRIPE_PUBLISHABLE_KEY": "@stripe_publishable_key",
+      "STRIPE_SECRET_KEY": "@stripe_secret_key",
+      "STRIPE_WEBHOOK_SECRET": "@stripe_webhook_secret"
     }
   }
 }

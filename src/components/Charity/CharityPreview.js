@@ -1,8 +1,9 @@
 import React from 'react';
-import { Button, Image, Icon } from 'semantic-ui-react';
+import { Image, Icon } from 'semantic-ui-react';
 import styles from './CharityPreview.module.scss';
 import moment from 'moment'
 import Link from 'next/link';
+import DonateModal from '../Stripe/DonateModal';
 
 export default function CharityPreview(props) {
   const { horizontal, charity } = props;
@@ -44,10 +45,7 @@ export default function CharityPreview(props) {
             <p>Short description</p>
           </div>
         </div>
-        <Button className="mini compact ui orange basic smaller">
-          <Icon name="heart outline" />
-          Donate
-        </Button>
+        <DonateModal charity={charity}/>
         <a href="www.google.ca" className={styles.link}>
           <Icon name="star outline" />
           Follow
