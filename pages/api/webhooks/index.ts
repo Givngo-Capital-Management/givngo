@@ -6,6 +6,9 @@ import Stripe from 'stripe';
 
 import firebase from 'firebase/app';
 import 'firebase/database';
+import initFirebase from '../../../src/services/auth/initFirebase';
+
+initFirebase();
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
   // https://github.com/stripe/stripe-node#configuration
