@@ -1,8 +1,7 @@
 import React from 'react';
-import { Divider } from 'semantic-ui-react';
+import { Divider, Card, Container } from 'semantic-ui-react';
 import CharityPreview from '../Charity/CharityPreview';
 import CharityGridHeader from './CharityGridHeader';
-import styles from './CharityGrid.module.scss';
 
 export default function CharityGrid(props) {
   const { title, charities, hideDivider } = props;
@@ -20,12 +19,13 @@ export default function CharityGrid(props) {
   }
 
   return (
-    <>
+    <Container>
       <CharityGridHeader title={title} />
-      <div className={styles.grid}>
+      <Card.Group itemsPerRow={4}>
         {previews}
-      </div>
+      </Card.Group>
+
       {hideDivider ? null : <Divider />}
-    </>
+    </Container>
   );
 }
