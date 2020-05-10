@@ -4,11 +4,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 
 import Stripe from 'stripe';
 
-import firebase from 'firebase/app';
-import 'firebase/database';
-import initFirebase from '../../../src/services/auth/initFirebase';
-
-initFirebase();
+import { database } from '../../../src/services/auth/firebaseAdmin';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
   // https://github.com/stripe/stripe-node#configuration
@@ -58,10 +54,11 @@ const webhookHandler = async (req: NextApiRequest, res: NextApiResponse) => {
       );
     } else if (event.type === 'charge.succeeded') {
       const charge = event.data.object as Stripe.Charge;
+     
       console.log(`💵 Charge id: ${charge.id}`);
-
       console.log(`💵 Creating transaction ${charge.id} for charity ${charge.metadata.charity}`);
-      firebase.database().ref(`/transactions/${charge.metadata.charity}/${charge.id}`).set({
+
+      database.ref(`/transactions/${charge.metadata.charity}/${charge.id}`).set({
         created: charge.created,
         amount: charge.amount,
         billing_details: charge.billing_details,
@@ -69,14 +66,15 @@ const webhookHandler = async (req: NextApiRequest, res: NextApiResponse) => {
         customer: charge.customer,
         description: charge.description,
         receipt_url: charge.receipt_url
-      }, (error) => {
+      }, function(error) {
         if (error) {
           console.log(`🔥❌ firebase error: ${error}`)
         } else {
           console.log(`🔥✅ firebase success: charge saved successfully`)
         }
       });
-      firebase.database().ref(`/charities/${charge.metadata.charity}`).transaction((charity) => {
+
+      database.ref(`/charities/${charge.metadata.charity}`).transaction(function(charity) {
         if (charity) {
           if (charity.total_raised) {
             charity.total_raised += charge.amount;
@@ -85,7 +83,7 @@ const webhookHandler = async (req: NextApiRequest, res: NextApiResponse) => {
           }
         }
         return charity;
-      }, (error) => {
+      }, function(error) {
         if (error) {
           console.log(`🔥❌ firebase transaction error: ${error}`)
         } else {
