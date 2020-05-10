@@ -29,7 +29,9 @@ exports[`Charity renders 1`] = `
         width={6}
       >
         <div>
-          <CharityDonateBox />
+          <CharityDonateBox
+            charity={Object {}}
+          />
           <RelatedCharities />
         </div>
       </GridColumn>
