@@ -61,6 +61,7 @@ const webhookHandler = async (req: NextApiRequest, res: NextApiResponse) => {
       console.log(`💵 Charge id: ${charge.id}`);
 
       console.log(`💵 Creating transaction ${charge.id} for charity ${charge.metadata.charity}`);
+      console.log('Firebase', firebase.database().ref(`/transactions/${charge.metadata.charity}/${charge.id}`));
       firebase.database().ref(`/transactions/${charge.metadata.charity}/${charge.id}`).set({
         created: charge.created,
         amount: charge.amount,
@@ -69,6 +70,12 @@ const webhookHandler = async (req: NextApiRequest, res: NextApiResponse) => {
         customer: charge.customer,
         description: charge.description,
         receipt_url: charge.receipt_url
+      }, (error) => {
+        if (error) {
+          console.log(`🔥❌ firebase error: ${error}`)
+        } else {
+          console.log(`🔥✅ firebase success: charge saved successfully`)
+        }
       });
       firebase.database().ref(`/charities/${charge.metadata.charity}`).transaction((charity) => {
         if (charity) {
@@ -79,6 +86,12 @@ const webhookHandler = async (req: NextApiRequest, res: NextApiResponse) => {
           }
         }
         return charity;
+      }, (error) => {
+        if (error) {
+          console.log(`🔥❌ firebase transaction error: ${error}`)
+        } else {
+          console.log(`🔥✅ firebase transaction success`)
+        }
       });
     } else {
       console.warn(`🤷‍♀️ Unhandled event type: ${event.type}`);

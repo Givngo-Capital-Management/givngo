@@ -52,7 +52,6 @@ const RegisterCharityForm = (props: any) => {
         })
 
         setSuccess(`Successfully registered ${name}`)
-        console.log('set charity')
         resetForm();
       })
       .catch(error => {
