@@ -12,7 +12,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === 'POST') {
-    const { amount }: { amount: number } = req.body;
+    const { amount, charity_id }: { amount: number, charity_id: string } = req.body;
     try {
       // Validate the amount that was passed from the client
       if (!(amount >= MIN_AMOUNT && amount <= MAX_AMOUNT)) {
@@ -24,6 +24,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         payment_method_types: ['card'],
         amount: formatAmountForStripe(amount, CURRENCY),
         currency: CURRENCY,
+        metadata: { charity: charity_id }
       };
 
       const paymentIntent: Stripe.PaymentIntent = await stripe.paymentIntents.create(
