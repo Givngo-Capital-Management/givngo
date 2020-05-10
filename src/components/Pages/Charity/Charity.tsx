@@ -41,7 +41,7 @@ const CharityPage = (props: any) => {
           </Grid.Column>
           <Grid.Column width={6} floated="right">
             <div>
-              <CharityDonateBox />
+              <CharityDonateBox charity={charity ? charity : {}}/>
               <RelatedCharities />
             </div>
           </Grid.Column>

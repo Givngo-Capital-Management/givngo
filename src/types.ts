@@ -9,6 +9,7 @@ export interface Charity {
   categories: Categories,
   description: string,
   logo: string,
+  total_raised: string,
 }
 
 export interface Categories {

@@ -4,19 +4,15 @@ import DonationForm from './DonationForm'
 import StripeProvider from './StripeProvider'
 
 const DonateModal = (props: any) => {
-  const { charity } = props;
-  console.log('donate modal', charity);
+  const { charity, button } = props;
   return (
     <StripeProvider>
       <Modal trigger={
-        <Button className="mini compact ui orange basic smaller">
-          <Icon name="heart outline" />
-          Donate
-        </Button>
+        button
       }>
-        <Modal.Header>{`Donate to ${charity.name}`}</Modal.Header>
+        <Modal.Header>{`Donate to ${charity && charity.name}`}</Modal.Header>
         <Modal.Content image>
-          <Image middle wrapped size='medium' style={{paddingRight: 24}} src={charity.logo} />
+          <Image middle wrapped size='medium' style={{paddingRight: 24}} src={charity && charity.logo} />
           <Modal.Description>
             <DonationForm/>
           </Modal.Description>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, Icon } from 'semantic-ui-react';
+import { Button, Image, Icon } from 'semantic-ui-react';
 import styles from './CharityPreview.module.scss';
 import moment from 'moment'
 import Link from 'next/link';
@@ -15,6 +15,14 @@ export default function CharityPreview(props) {
   const videoPreview = charity ? charity.video_preview : ""
 
   const date = moment.utc(videoDate * 1000).format('MMMM DD, YYYY').toString()
+
+  const donateButton = (
+    <Button className="mini compact ui orange basic smaller">
+      <Icon name="heart outline" />
+      Donate
+    </Button>
+  )
+
   return (
     <div
       className={[styles.preview, horizontal ? styles.horizontal : null].join(
@@ -45,7 +53,7 @@ export default function CharityPreview(props) {
             <p>Short description</p>
           </div>
         </div>
-        <DonateModal charity={charity}/>
+        <DonateModal charity={charity} button={donateButton}/>
         <a href="www.google.ca" className={styles.link}>
           <Icon name="star outline" />
           Follow

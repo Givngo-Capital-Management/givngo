@@ -53,7 +53,20 @@ exports[`CharityPreview renders horizontally 1`] = `
         </p>
       </div>
     </div>
-    <DonateModal />
+    <DonateModal
+      button={
+        <Button
+          as="button"
+          className="mini compact ui orange basic smaller"
+        >
+          <Icon
+            as="i"
+            name="heart outline"
+          />
+          Donate
+        </Button>
+      }
+    />
     <a
       className="link"
       href="www.google.ca"
@@ -131,7 +144,20 @@ exports[`CharityPreview renders vertically 1`] = `
         </p>
       </div>
     </div>
-    <DonateModal />
+    <DonateModal
+      button={
+        <Button
+          as="button"
+          className="mini compact ui orange basic smaller"
+        >
+          <Icon
+            as="i"
+            name="heart outline"
+          />
+          Donate
+        </Button>
+      }
+    />
     <a
       className="link"
       href="www.google.ca"
