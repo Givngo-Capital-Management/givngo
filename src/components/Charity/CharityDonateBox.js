@@ -33,7 +33,7 @@ export default function CharityDonateBox(props) {
           </div>
         </Grid>
 
-        <h3>{`Total raised: $${charity.total_raised || 0}`}</h3>
+        <h3>{`Total raised: $${charity.total_raised/100 || 0}`}</h3>
       </div>
     </div>
   );

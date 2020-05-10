@@ -31,7 +31,8 @@ const CARD_OPTIONS = {
   },
 };
 
-const DonationForm: React.FunctionComponent = () => {
+const DonationForm = (props: any) => {
+  const { charity } = props;
   const [input, setInput] = useState({
     customDonation: 20,
     cardholderName: '',
@@ -92,6 +93,7 @@ const DonationForm: React.FunctionComponent = () => {
     // Create a PaymentIntent with the specified amount
     const response = await stripeApi.createPaymentIntent({
       amount: input.customDonation,
+      charity_id: charity.id
     });
     setPayment(response);
 
@@ -121,6 +123,7 @@ const DonationForm: React.FunctionComponent = () => {
       setPayment({ status: 'error' });
       setErrorMessage(error.message ?? 'An unknown error occured');
     } else if (paymentIntent) {
+      console.log('payment intent', paymentIntent)
       setPayment(paymentIntent);
     }
   };

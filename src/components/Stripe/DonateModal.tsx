@@ -14,7 +14,7 @@ const DonateModal = (props: any) => {
         <Modal.Content image>
           <Image middle wrapped size='medium' style={{paddingRight: 24}} src={charity && charity.logo} />
           <Modal.Description>
-            <DonationForm/>
+            <DonationForm charity={charity}/>
           </Modal.Description>
         </Modal.Content>
       </Modal>
