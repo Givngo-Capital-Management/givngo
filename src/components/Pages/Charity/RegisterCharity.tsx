@@ -39,11 +39,7 @@ const RegisterCharityForm = (props: any) => {
 
   const onSubmit = (event: FormEvent, data: FormProps) => {
     fetchVideo(videoId)
-      .then((response: any) => {
-        categories.split(',').forEach(element => {
-      
-        });
-        
+      .then((response: any) => {      
         var newCharity = firebase.database().ref('/charities').push()
 
         newCharity.set({
@@ -51,6 +47,7 @@ const RegisterCharityForm = (props: any) => {
           description,
           logo,
           donationUrl,
+          categories: { name: categories },
           ...response
         })
 

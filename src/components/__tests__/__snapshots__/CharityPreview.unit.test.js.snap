@@ -1,183 +1,171 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CharityPreview renders horizontally 1`] = `
-<div
-  className="preview horizontal"
->
-  <Link
-    href="/charity/"
-  >
-    <a>
-      <div
-        className="image"
+<Card
+  extra={
+    <React.Fragment>
+      <DonateModal
+        button={
+          <Button
+            as="button"
+            className="mini compact ui orange basic smaller"
+          >
+            <Icon
+              as="i"
+              name="heart outline"
+            />
+            Donate
+          </Button>
+        }
+      />
+      <a
+        href="www.google.ca"
+        style={
+          Object {
+            "color": "#ff8000",
+            "paddingLeft": 10,
+          }
+        }
       >
+        <Icon
+          as="i"
+          color="orange"
+          name="star outline"
+        />
+        Follow
+      </a>
+      <a
+        href="www.google.ca"
+        style={
+          Object {
+            "color": "#ff8000",
+            "paddingLeft": 10,
+          }
+        }
+      >
+        <Icon
+          as="i"
+          color="orange"
+          name="share"
+        />
+        Share
+      </a>
+    </React.Fragment>
+  }
+  header={
+    <Link
+      href="/charity/"
+    >
+      <a
+        style={
+          Object {
+            "color": "black",
+          }
+        }
+      >
+        
+      </a>
+    </Link>
+  }
+  image={
+    <Link
+      href="/charity/"
+    >
+      <a>
         <Image
           as="img"
           src=""
           ui={true}
         />
-        <div
-          className="time"
-        >
-          <span>
-            05:22
-          </span>
-        </div>
-      </div>
-    </a>
-  </Link>
-  <div
-    className="info"
-  >
-    <Link
-      href="/charity/"
-    >
-      <a>
-        <div
-          className="bold lines"
-        />
       </a>
     </Link>
-    <div
-      className="metadata"
-    >
-      <div
-        className="title"
-      />
-      <div>
-        <span>
-          January 01, 1970
-        </span>
-        <p>
-          Short description
-        </p>
-      </div>
-    </div>
-    <DonateModal
-      button={
-        <Button
-          as="button"
-          className="mini compact ui orange basic smaller"
-        >
-          <Icon
-            as="i"
-            name="heart outline"
-          />
-          Donate
-        </Button>
-      }
-    />
-    <a
-      className="link"
-      href="www.google.ca"
-    >
-      <Icon
-        as="i"
-        name="star outline"
-      />
-      Follow
-    </a>
-    <a
-      className="link"
-      href="www.google.ca"
-    >
-      <Icon
-        as="i"
-        name="share"
-      />
-      Share
-    </a>
-  </div>
-</div>
+  }
+  meta="
+January 01, 1970"
+/>
 `;
 
 exports[`CharityPreview renders vertically 1`] = `
-<div
-  className="preview "
->
-  <Link
-    href="/charity/"
-  >
-    <a>
-      <div
-        className="image"
+<Card
+  extra={
+    <React.Fragment>
+      <DonateModal
+        button={
+          <Button
+            as="button"
+            className="mini compact ui orange basic smaller"
+          >
+            <Icon
+              as="i"
+              name="heart outline"
+            />
+            Donate
+          </Button>
+        }
+      />
+      <a
+        href="www.google.ca"
+        style={
+          Object {
+            "color": "#ff8000",
+            "paddingLeft": 10,
+          }
+        }
       >
+        <Icon
+          as="i"
+          color="orange"
+          name="star outline"
+        />
+        Follow
+      </a>
+      <a
+        href="www.google.ca"
+        style={
+          Object {
+            "color": "#ff8000",
+            "paddingLeft": 10,
+          }
+        }
+      >
+        <Icon
+          as="i"
+          color="orange"
+          name="share"
+        />
+        Share
+      </a>
+    </React.Fragment>
+  }
+  header={
+    <Link
+      href="/charity/"
+    >
+      <a
+        style={
+          Object {
+            "color": "black",
+          }
+        }
+      >
+        
+      </a>
+    </Link>
+  }
+  image={
+    <Link
+      href="/charity/"
+    >
+      <a>
         <Image
           as="img"
           src=""
           ui={true}
         />
-        <div
-          className="time"
-        >
-          <span>
-            05:22
-          </span>
-        </div>
-      </div>
-    </a>
-  </Link>
-  <div
-    className="info"
-  >
-    <Link
-      href="/charity/"
-    >
-      <a>
-        <div
-          className="bold lines"
-        />
       </a>
     </Link>
-    <div
-      className="metadata"
-    >
-      <div
-        className="title"
-      />
-      <div>
-        <span>
-          January 01, 1970
-        </span>
-        <p>
-          Short description
-        </p>
-      </div>
-    </div>
-    <DonateModal
-      button={
-        <Button
-          as="button"
-          className="mini compact ui orange basic smaller"
-        >
-          <Icon
-            as="i"
-            name="heart outline"
-          />
-          Donate
-        </Button>
-      }
-    />
-    <a
-      className="link"
-      href="www.google.ca"
-    >
-      <Icon
-        as="i"
-        name="star outline"
-      />
-      Follow
-    </a>
-    <a
-      className="link"
-      href="www.google.ca"
-    >
-      <Icon
-        as="i"
-        name="share"
-      />
-      Share
-    </a>
-  </div>
-</div>
+  }
+  meta="
+January 01, 1970"
+/>
 `;

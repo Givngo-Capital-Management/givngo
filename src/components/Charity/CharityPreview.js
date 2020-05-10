@@ -1,12 +1,11 @@
 import React from 'react';
-import { Button, Image, Icon } from 'semantic-ui-react';
-import styles from './CharityPreview.module.scss';
+import { Button, Image, Icon, Card } from 'semantic-ui-react';
 import moment from 'moment'
 import Link from 'next/link';
 import DonateModal from '../Stripe/DonateModal';
 
 export default function CharityPreview(props) {
-  const { horizontal, charity } = props;
+  const { charity } = props;
 
   const id = charity ? charity.id : ""
   const name = charity ? charity.name : ""
@@ -23,47 +22,38 @@ export default function CharityPreview(props) {
     </Button>
   )
 
-  return (
-    <div
-      className={[styles.preview, horizontal ? styles.horizontal : null].join(
-        ' ',
-      )}
-    >
-      <Link href={`/charity/${id}`}>
-        <a>
-          <div className={styles.image}>
-            <Image src={videoPreview} />
-            <div className={styles.time}>
-              <span>05:22</span>
-            </div>
-          </div>
-        </a>
-      </Link>
+  const cardImage = (
+    <Link href={`/charity/${id}`}>
+      <a><Image src={videoPreview} /></a>
+    </Link>
+  )
 
-      <div className={styles.info}>
-        <Link href={`/charity/${id}`}>
-          <a>
-            <div className={`${styles.bold} ${styles.lines}`}>{videoTitle}</div>
-          </a>
-        </Link>
-        <div className={styles.metadata}>
-        <div className={styles.title}>{name}</div>
-          <div>
-            <span>{date}</span>
-            <p>Short description</p>
-          </div>
-        </div>
-        <DonateModal charity={charity} button={donateButton}/>
-        <a href="www.google.ca" className={styles.link}>
-          <Icon name="star outline" />
-          Follow
-        </a>
-        <a href="www.google.ca" className={styles.link}>
-          <Icon name="share" />
-          Share
-        </a>
-      </div>
-      
-    </div>
+  const cardHeader = (
+    <Link href={`/charity/${id}`}>
+      <a style={{color: 'black'}}>{videoTitle}</a>
+    </Link>
+  )
+
+  const cardExtra = (
+    <>
+      <DonateModal charity={charity} button={donateButton}/>
+      <a style={{color: '#ff8000', paddingLeft: 10}} href="www.google.ca">
+        <Icon color='orange' name="star outline" />
+        Follow
+      </a>
+      <a style={{color: '#ff8000', paddingLeft: 10}} href="www.google.ca">
+        <Icon color='orange' name="share" />
+        Share
+      </a>
+    </>
+  )
+
+  return (
+    <Card
+      image={cardImage}
+      header={cardHeader}
+      meta={`${name}\n${date}`}
+      extra={cardExtra}
+    />
   );
 }
