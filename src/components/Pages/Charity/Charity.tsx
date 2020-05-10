@@ -24,7 +24,9 @@ const CharityPage = (props: any) => {
       .ref(`charities/${id}`)
       .on('value', (snapshot) => {
         if (snapshot) {
-          setCharity(snapshot.val());
+          let charity = snapshot.val();
+          charity.id = snapshot.key;
+          setCharity(charity);
         }
       });
     return listener(null);

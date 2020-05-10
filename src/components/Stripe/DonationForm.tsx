@@ -123,7 +123,6 @@ const DonationForm = (props: any) => {
       setPayment({ status: 'error' });
       setErrorMessage(error.message ?? 'An unknown error occured');
     } else if (paymentIntent) {
-      console.log('payment intent', paymentIntent)
       setPayment(paymentIntent);
     }
   };
